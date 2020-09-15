@@ -8,42 +8,69 @@
 
 <body>
     <style>
-        .webcam-container{
+        .webcam-container {
             position: relative;
         }
-        
-        .face-template{
+
+        .face-template {
             position: absolute;
             left: 0;
         }
-        
-        
-    
     </style>
     <p>Live View</p>
     <div class="webcam-container">
-    <video id="webcam" autoplay playsinline width="640" height="480"></video>
-    <img class="face-template" src="face-template.png"/>
+        <video id="webcam" autoplay playsinline width="640" height="480"></video>
+        <img class="face-template" src="face-template.png" />
     </div>
-    
+
     <p>Canvas</p>
     <canvas id="canvas" class="d-none"></canvas>
 
     <button id="take_pic">Take Picture</button>
     <a id="download-photo" href="">download me</a>
-    
-    <p>Preview</p>
-    <img id="preview" src="">
 
     <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
         const webcamElement = document.getElementById('webcam');
         const canvasElement = document.getElementById('canvas');
         const webcam = new Webcam(webcamElement, 'user', canvasElement);
 
+        let img1;
+        let img2 = loadImage('fox-template.png', main);
+
+        let imagesLoaded = 0;
+
+        function main() {
+            imagesLoaded += 1;
+
+            if (imagesLoaded == 2) {
+                // composite now
+                    ctx.scale(-1,1);
+                ctx.drawImage(img1, 0, 0);
+
+                ctx.globalAlpha = 0.5;
+                                    ctx.scale(-1,1);
+
+                ctx.drawImage(img2, 0, 0);
+            }
+        }
+
+        function loadImage(src, onload) {
+            let img = new Image();
+
+            img.onload = onload;
+            img.src = src;
+
+            return img;
+        }
+
         document.getElementById("take_pic").addEventListener('click', function() {
             let picture = webcam.snap();
             document.querySelector('#download-photo').href = picture;
-            document.querySelector('#preview').src = picture;
+
+            img1 = picture;
+            img1 = loadImage(img1, main);
 
         });
 
@@ -62,7 +89,4 @@
                 }
             });
     </script>
-
-</body>
-
-</html>
+</body></html>
