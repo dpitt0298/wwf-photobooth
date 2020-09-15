@@ -16,6 +16,7 @@
             position: absolute;
             left: 0;
         }
+
     </style>
     <p>Live View</p>
     <div class="webcam-container">
@@ -27,7 +28,9 @@
     <canvas id="canvas" class="d-none"></canvas>
 
     <button id="take_pic">Take Picture</button>
-    <a id="download-photo" href="">download me</a>
+
+    <a download="myImage.jpg" onclick="download_img(this);">download me</a>
+
 
     <script>
         const canvas = document.getElementById("canvas");
@@ -41,16 +44,17 @@
 
         let imagesLoaded = 0;
 
+
         function main() {
             imagesLoaded += 1;
 
             if (imagesLoaded == 2) {
                 // composite now
-                    ctx.scale(-1,1);
+                ctx.scale(-1, 1);
                 ctx.drawImage(img1, 0, 0);
 
                 ctx.globalAlpha = 0.5;
-                                    ctx.scale(-1,1);
+                ctx.scale(-1, 1);
 
                 ctx.drawImage(img2, 0, 0);
             }
@@ -65,9 +69,14 @@
             return img;
         }
 
+        download_img = function(el) {
+            let image = canvas.toDataURL("image/jpg");
+            el.href = image;
+        };
+        
+                
         document.getElementById("take_pic").addEventListener('click', function() {
             let picture = webcam.snap();
-            document.querySelector('#download-photo').href = picture;
 
             img1 = picture;
             img1 = loadImage(img1, main);
@@ -88,5 +97,8 @@
                     alert('Please install an external webcam device.');
                 }
             });
+
     </script>
-</body></html>
+</body>
+
+</html>
