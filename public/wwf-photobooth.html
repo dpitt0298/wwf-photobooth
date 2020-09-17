@@ -48,6 +48,7 @@
         function main() {
             imagesLoaded += 1;
 
+
             if (imagesLoaded == 2) {
                 // composite now
                 ctx.scale(-1, 1);
@@ -72,9 +73,18 @@
         download_img = function(el) {
             let image = canvas.toDataURL("image/jpg");
             el.href = image;
+
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "https://eoz3t2ugw0.execute-api.eu-west-1.amazonaws.com/staging/", true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(JSON.stringify({
+                'name': 'thisnamewithnoimageextension',
+                'image': image
+            }));
         };
-        
-                
+
+
         document.getElementById("take_pic").addEventListener('click', function() {
             let picture = webcam.snap();
 
