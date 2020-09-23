@@ -23,25 +23,28 @@ function toggleMenu()
 * Requirements: Click Menu icon on Mobile/Tablet view.
 
 *Testing:*
-Does it show desktop?
+1. Does it show desktop?
 
 
-** Search toggle **
+**Search toggle**
 
 function toggleSearch()
 
 * When search button is clicked the search bar either shows or closes depending on it's state
 * Requirements:
 
-- Does the close button function accordingly
+*Testing*
+1. Does the close button function accordingly
 
-** Mobile accordion **
+**Mobile accordion**
 
 function toggleDropdown()
 
 * In the mobile/tablet menu the accordion dropdown should open accordingly upon clicking with one at a time.
+* Requirements: 
 
-
+*Testing:*
+1. 
 
 # Paragraphs
 
@@ -54,7 +57,6 @@ function killVideos()
 function playVideo()
 
 * Play youtube video within the iframe
-
 
 Opens video modal
 function js-modal-open()
