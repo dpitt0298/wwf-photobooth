@@ -73,15 +73,26 @@ mapMouseDown()
 
 mapMouseLeave()
 
+**Adoption**
+
+**Donations**
+
 **fundraising**
 
 toggleColor
 
-#carousel
-
-jsCarouselEl
-
 
 # Miscellaneous
 
-Cookies
+**Cookies**
+
+**Tab System**
+**Slick Slider**
+
+**matchHeightWildlifeExpertPanel **
+
+**modifierChanger**
+
+
+**doKonami**
+
