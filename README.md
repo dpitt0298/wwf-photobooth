@@ -10,7 +10,7 @@ function jumpLinkOffset(tar)
 * Upon clicking an anchor link the interface should scroll to the specified element on the page
 * Requirements: Anchor tag is linked to an existing id tag on the page.
 
-*Testing:*
+ *Testing:*
 1. What happens if element does not exist?
 2. Does the link scroll the inputted element?
 3. Does the scroll work on mobile?
