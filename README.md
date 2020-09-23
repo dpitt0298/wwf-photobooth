@@ -11,9 +11,9 @@ function jumpLinkOffset(tar)
 * Requirements: Anchor tag is linked to an existing id tag on the page.
 
 *Testing:*
-What happens if element does not exist?
-Does the link scroll the inputted element?
-Does the scroll work on mobile?
+1. What happens if element does not exist?
+2. Does the link scroll the inputted element?
+3. Does the scroll work on mobile?
 
 **Menu Toggle**
 
