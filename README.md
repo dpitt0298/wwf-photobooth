@@ -3,26 +3,26 @@
 # Navigation
 
 
-** Scroll to Link **
+**Scroll to Link**
 
 function jumpLinkOffset(tar)
 
 * Upon clicking an anchor link the interface should scroll to the specified element on the page
 * Requirements: Anchor tag is linked to an existing id tag on the page.
 
-Testing:
+*Testing:*
 What happens if element does not exist?
 Does the link scroll the inputted element?
 Does the scroll work on mobile?
 
-** Menu Toggle **
+**Menu Toggle**
 
 function toggleMenu()
 
 * Upon clicking the menu icon in tablet/mobile view the menu should switch between opened and closed.
 * Requirements: Click Menu icon on Mobile/Tablet view.
 
-Testing:
+*Testing:*
 Does it show desktop?
 
 
@@ -45,7 +45,7 @@ function toggleDropdown()
 
 # Paragraphs
 
-# Hero Video Paragraph
+**Hero Video Paragraph**
 
 function killVideos()
 
@@ -61,7 +61,7 @@ function js-modal-open()
 
 function js-modal-close()
 
-# Google Maps Paragraph
+**Google Maps Paragraph**
 
 function javascriptMap()
 
@@ -71,7 +71,7 @@ mapMouseDown()
 
 mapMouseLeave()
 
-# fundraising
+**fundraising**
 
 toggleColor
 
