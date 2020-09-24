@@ -53,19 +53,20 @@ function toggleDropdown()
 ## Paragraphs
 
 **Hero Video Paragraph**
+* Top banner hero containing a video.
 
-function killVideos()
-
-* Kill video with in the iframe
-
+[These functions open the modal and plays the video within the iframe]
+function js-modal-open()
 function playVideo()
 
-* Play youtube video within the iframe
-
-Opens video modal
-function js-modal-open()
-
+[These functions close the modal and stops the video within the iframe]
 function js-modal-close()
+function killVideos()
+
+*Tests*
+1. In the hero paragraph, when the play button is clicked does the video player modal open?
+2. Does the modal close after user clicks outside of the modal?
+
 
 **Google Maps Paragraph**
 
