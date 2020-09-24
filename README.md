@@ -2,19 +2,6 @@
 
 # Navigation
 
-
-**Scroll to Link**
-
-function jumpLinkOffset(tar)
-
-* Upon clicking an anchor link the interface should scroll to the specified element on the page
-* Requirements: Anchor tag is linked to an existing id tag on the page.
-
- *Testing:*
-1. What happens if element does not exist?
-2. Does the link scroll the inputted element?
-3. Does the scroll work on mobile?
-
 **Menu Toggle**
 
 function toggleMenu()
@@ -46,6 +33,26 @@ function toggleDropdown()
 *Testing:*
 1. 
 
+**Site Header**
+let lastScrollTop = 0;
+
+window.onscroll = function() {
+  const header = document.querySelector(".site_header");
+  const headerHeight = header.offsetHeight;
+  const st = window.pageYOffset;
+  if (st > headerHeight) {
+    header.classList.add("site_header--shrink");
+    if (st > lastScrollTop) {
+      header.classList.remove("site_header--fixed");
+    } else {
+      header.classList.add("site_header--fixed");
+    }
+  } else {
+    header.classList.remove("site_header--shrink", "site_header--fixed");
+  }
+  lastScrollTop = st;
+};
+
 # Paragraphs
 
 **Hero Video Paragraph**
@@ -73,9 +80,18 @@ mapMouseDown()
 
 mapMouseLeave()
 
-**Adoption**
+**Adoption Slice**
 
-**Donations**
+function toggleDropdown()
+
+* In the mobile/tablet menu the accordion dropdown should open accordingly upon clicking with one at a time.
+* Requirements: 
+
+*Testing:*
+1. 
+
+function resetAdoptionPanelErrorMessage()
+**Donation - give an hour**
 
 **fundraising**
 
@@ -83,6 +99,25 @@ toggleColor
 
 
 # Miscellaneous
+
+**Scroll to Link**
+
+function jumpLinkOffset(tar)
+
+* Upon clicking an anchor link the interface should scroll to the specified element on the page
+* Requirements: Anchor tag is linked to an existing id tag on the page.
+
+ *Testing:*
+1. What happens if element does not exist?
+2. Does the link scroll the inputted element?
+3. Does the scroll work on mobile?
+
+
+ * When the page loads, scroll to the ID.
+function pageLoad()
+
+ * When the hash changes, scroll to the ID.
+function hashScroll() {
 
 **Cookies**
 
@@ -95,4 +130,16 @@ toggleColor
 
 
 **doKonami**
+ * Checks to see if we are on same page as the clicked link
+ */
+function isSamePage(link) {
 
+
+// Fetches the height of the header
+function getHeaderHeight() {
+
+  //Wildlife page anchor scrollto
+
+    $('.js-anchor').on('click', function (e) {
+    
+        function matchHeightWildlifeExpertPanel () {
