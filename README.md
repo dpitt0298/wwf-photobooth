@@ -56,11 +56,15 @@ function toggleDropdown()
 * Top banner hero containing a video.
 
 [These functions open the modal and plays the video within the iframe]
+
 function js-modal-open()
+
 function playVideo()
 
 [These functions close the modal and stops the video within the iframe]
+
 function js-modal-close()
+
 function killVideos()
 
 *Tests*
@@ -69,7 +73,9 @@ function killVideos()
 
 
 **Google Maps Paragraph**
+* A map of the given coordinators should appear in this container
 
+Main function used in array containing nested functions.
 function javascriptMap()
 
 mapMouseUp()
@@ -133,11 +139,6 @@ function hashScroll() {
 function isSamePage(link) {
 
 
-// Fetches the height of the header
-function getHeaderHeight() {
-
-  //Wildlife page anchor scrollto
-
-    $('.js-anchor').on('click', function (e) {
-    
-        function matchHeightWildlifeExpertPanel () {
+**Get header Height**
+The function fetches the height of the header
+function getHeaderHeight()
