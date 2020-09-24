@@ -35,7 +35,7 @@ function toggleDropdown()
 
 **Site Header**
 
-``
+`
 let lastScrollTop = 0;
 
 window.onscroll = function() {
@@ -54,7 +54,7 @@ window.onscroll = function() {
   }
   lastScrollTop = st;
 };
-``
+`
 
 # Paragraphs
 
