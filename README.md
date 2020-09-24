@@ -1,62 +1,56 @@
 # Site.js Regression Testing List
 
-# Navigation
+## Navigation
 
 **Menu Toggle**
 
 function toggleMenu()
 
 * Upon clicking the menu icon in tablet/mobile view the menu should switch between opened and closed.
-* Requirements: Click Menu icon on Mobile/Tablet view.
+* Requirements: Navigation menu must be visible on webpage.
 
 *Testing:*
 1. Does it show desktop?
-
+2. Does is dissapear on Tablet/Mobile View? (Should be yes)
 
 **Search toggle**
 
 function toggleSearch()
 
 * When search button is clicked the search bar either shows or closes depending on it's state
-* Requirements:
+* Requirements: Top header must be visible on webpage.
 
 *Testing*
-1. Does the close button function accordingly
+1. Upon click does the searchbox appear over the navigation menu? 
+2. Does the close button function accordingly?
+3. Does it function on Tablet/Mobile?
+4. Do search queries work?
 
 **Mobile accordion**
 
 function toggleDropdown()
 
 * In the mobile/tablet menu the accordion dropdown should open accordingly upon clicking with one at a time.
-* Requirements: 
+* Requirements: Navigation menu must be open on Tablet/Mobile
 
 *Testing:*
-1. 
+1. Does each menu item open when clicked?
+2. Is only one item active at a time?
+3. Is it hidden on desktop?
+4. Do links take you to the right pages?
 
 **Site Header**
+* The site header contains the navigation menu and top menu.
+* Requirements: Must be at the top of any webpage
 
-`
-let lastScrollTop = 0;
+*Tests:*
+1. Is the site header visible?
+2. After scrolling down the page from the inital page's position, does the top menu dissapear? 
+3. Scrolling further down the page, is the navigation menu fixed to the top of the page?
+4. After scrolling down the page and back to the top, does the top menu reappear ontop of the navigation menu?
+5. Are the transitions between the menu positions menu?
 
-window.onscroll = function() {
-  const header = document.querySelector(".site_header");
-  const headerHeight = header.offsetHeight;
-  const st = window.pageYOffset;
-  if (st > headerHeight) {
-    header.classList.add("site_header--shrink");
-    if (st > lastScrollTop) {
-      header.classList.remove("site_header--fixed");
-    } else {
-      header.classList.add("site_header--fixed");
-    }
-  } else {
-    header.classList.remove("site_header--shrink", "site_header--fixed");
-  }
-  lastScrollTop = st;
-};
-`
-
-# Paragraphs
+## Paragraphs
 
 **Hero Video Paragraph**
 
